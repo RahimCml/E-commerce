@@ -1,52 +1,30 @@
-//customer
-//seller
-//product
-
-
-class Customer {
-    constructor(name, address){
-        this.name = name
-        this.address = address // seller'in customer addressini gormesini asgla 
-        this.selectedProducts = []
-
-    }
-    Products( origin, selectProduct, seller){
-        const selectedproduct = new selectedProduct( seller, this , selectProduct, origin)
-
-        this.selectedProducts.push(selectedproduct)
-
-    }
-}
-
-class Seller { 
-    constructor(name){
-        this.name = name
-    }
-
-}
-
-// class Product {
-//     constructor(name){
-//         this.name = name
-//     }
-// }
-
-class selectedProduct {
-    constructor(origin, customer, selectProduct, seller){
-        this.seller = seller 
-        this.customer = customer
-        this.origin = origin
-        this.selectProduct = selectProduct
-
-    }
-}
+const Customer = require ('./customer')
+const Seller = require ('./seller')
 
 const pasha = new Customer('Pasha', 'Baku')
+const kenan = new Customer('Kenan', 'Ganja')
+
 const chuba = new Seller('Chuba')
+const chanel = new Seller('Chanel')
 const cucci = new Seller('Cucci')
- 
-pasha.Products(chuba, 'Sweater', 'Baku')
-pasha.Products(cucci, 'Jeans', 'Kharabah')
-console.log(pasha.selectedProducts)
-console.log(`${pasha.name} has ${pasha.selectedProducts.length} Select`)
-console.log(`${pasha.name} has chosen the ${pasha.selectedProducts[0].selectProduct} from ${chuba.name}`)
+
+
+const sProduct1 = pasha.Products(cucci, 'Jeans')
+const sProduct2 = pasha.Products(chuba, 'Sweater')
+const sProduct3 = pasha.Products(chuba, 'T-shirt')
+const sProduct4 = kenan.Products(chanel, 'parfum')
+
+// printSelectHistory()
+
+ function printSelectHistory(customer){
+    customer.selectedProducts.forEach(printSelect)
+}
+
+printSelectHistory(pasha)
+printSelectHistory(kenan)
+
+function printSelect (selectedproduct) {
+    console.log(`${selectedproduct.customer.name} has chosen the ${selectedproduct.selectProduct} from ${selectedproduct.seller.name} address: ${selectedproduct.customer.address}`)
+}
+
+// console.log(`${pasha.name} has ${pasha.selectedProducts.length} Select`)
