@@ -1,9 +1,10 @@
 class Product {
-    constructor(address, customer, selectProduct, seller){
+    constructor(address, customer,name,  seller){
         this.seller = seller 
         this.customer = customer
         this.address = address
-        this.selectProduct = selectProduct
+        this.name = name 
     }
+    
 }
 module.exports = Product

@@ -1,4 +1,4 @@
-const SelectedProduct =  require('./selectProduct')
+const Product = require('./product')
 
 class Customer {
     constructor(name, address){
@@ -7,8 +7,8 @@ class Customer {
         this.selectedProducts = []
 
     }
-    buyProduct ( address, selectProduct, seller){
-        const selectedproduct = new SelectedProduct( seller, this , selectProduct, address)
+    buyProduct (address, name,  seller){
+        const selectedproduct = new Product( seller, this, name ,address)
 
         this.selectedProducts.push(selectedproduct)
 
