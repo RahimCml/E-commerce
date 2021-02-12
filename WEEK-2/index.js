@@ -9,10 +9,10 @@ const chanel = new Seller('Chanel')
 const cucci = new Seller('Cucci')
 
 
-const sProduct1 = pasha.Products(cucci, 'Jeans')
-const sProduct2 = pasha.Products(chuba, 'Sweater')
-const sProduct3 = pasha.Products(chuba, 'T-shirt')
-const sProduct4 = kenan.Products(chanel, 'parfum')
+const sProduct1 = pasha.buyProduct (cucci, 'Jeans')
+const sProduct2 = pasha.buyProduct (chuba, 'Sweater')
+const sProduct3 = pasha.buyProduct (chuba, 'T-shirt')
+const sProduct4 = kenan.buyProduct (chanel, 'parfum')
 
 // printSelectHistory()
 

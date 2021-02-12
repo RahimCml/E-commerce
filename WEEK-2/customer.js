@@ -7,7 +7,7 @@ class Customer {
         this.selectedProducts = []
 
     }
-    Products( address, selectProduct, seller){
+    buyProduct ( address, selectProduct, seller){
         const selectedproduct = new SelectedProduct( seller, this , selectProduct, address)
 
         this.selectedProducts.push(selectedproduct)
