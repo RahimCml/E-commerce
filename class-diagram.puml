@@ -1,0 +1,92 @@
+@startuml "Class Diagram"
+
+
+class Admin <<Entity>> {
+    + moderateComments() 
+}
+
+
+interface Shopping {
+
+}
+
+class Admin << Entity >> {
+    + name : String
+    + password : String
+    + email : String
+
+    + ViewCustomers()
+    + ViewOrders()
+    + Delete()
+    + Passive()
+}
+
+class Customer <<Entity>> {
+    +name: String
+    +email: String
+    +password: String 
+    +phone: Number
+    +address: String
+    +creditCards: []
+    +baskets: []
+
+    +Update()
+    +Delete()
+    +PlaceOrder()
+    +CancelBuy()
+    +Search()
+}
+class Seller <<Entity>> {
+    +name: String
+    +email: String
+    +phone: Number
+    +product: String
+    +address: String
+    +creditCards: []
+
+    +Search()
+    +Add()
+    +Delete()
+    +Update()
+
+}
+
+
+class Products <<Entity>> {
+    + name: String
+    + brand: String
+    + photo: String
+    + notes: String
+    + commit: String
+    + piece: Number
+    + available: Number 
+    + size: Number
+    + Evaluation: Number
+    + comment: String
+}
+
+enum Category {
+    + name : String
+}
+
+' class Basket << Entity >> {
+'     + products : products[]
+'     + products_piece : products_piece[]
+'     + notes : String
+'     + status : Number
+' }
+
+class Order << Entity >> { 
+    + basketid: Number
+    + date: Date
+}
+
+Products --|> Shopping
+Customer -up-o Admin
+Seller -up-o Admin
+Products -up-* Seller
+Products *-left- Category
+' Customer *-- Basket
+Customer *-- Order
+
+@enduml

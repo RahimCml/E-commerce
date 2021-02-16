@@ -1,0 +1,54 @@
+[[
+  "1",
+  "2"
+],{
+  "id": "3",
+  "name": "4",
+  "address": "5",
+  "basket": "6"
+},{
+  "id": "7",
+  "name": "8",
+  "address": "9",
+  "basket": "10"
+},"0df4be3b-ca7c-4b7a-89e6-bb85634e13a6","Kenan","Ganja",[
+  "11"
+],"11f96f5d-3793-4419-b663-8a4f21f8aadb","Pasha","Baku",[
+  "12",
+  "13",
+  "14"
+],{
+  "productName": "15",
+  "seller": "16",
+  "customer": "1"
+},{
+  "productName": "17",
+  "seller": "18",
+  "customer": "2"
+},{
+  "productName": "19",
+  "seller": "20",
+  "customer": "2"
+},{
+  "productName": "21",
+  "seller": "16",
+  "customer": "2"
+},{
+  "productName": "22",
+  "price": 90
+},{
+  "name": "23"
+},{
+  "productName": "24",
+  "price": 50
+},{
+  "name": "25"
+},{
+  "productName": "26",
+  "price": 530
+},{
+  "name": "27"
+},{
+  "productName": "28",
+  "price": 550
+},"Parfum","Chanel","Jeans","Cucci","Sweater","Chuba","T-shirt"]
