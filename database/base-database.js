@@ -5,22 +5,23 @@ class BaseDatabase {
     constructor(model) {
         this.model = model 
         this.fileName = model.name.toLowerCase()
-    }
+    } 
     save (objects) {
-        fs.writeFileSync(`./${this.fileName}.json`, flatted.stringify(objects, null, 2))
+        fs.writeFileSync(`./models/${this.fileName}.json`, flatted.stringify(objects, null, 2))
     }
     
     load () {
-        const file = fs.readFileSync(`./${this.fileName}.json`, 'utf8')
+        const file = fs.readFileSync(`./models/${this.fileName}.json`, 'utf8')
         const objects = flatted.parse(file)
 
         return objects.map(this.model.create)
     }
     
-    insert (object)  {
+    insert (object) {
         const objects = this.load ()
+
         this.save(objects.concat(object)) 
-    }
+    } 
     
     remove (index) {
         const objects = this.load ()
@@ -40,9 +41,12 @@ class BaseDatabase {
         this.save(objects)
     }
 
-    // findBy (property, value) {
-    //     return this.load().find( o => o[property] == value)
-    // }
+    findBy (property, value) {
+        return this.load().find( o => o[property] == value)
+    }
+
+    
 }
+
 
 module.exports = BaseDatabase

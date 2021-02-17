@@ -1,5 +1,5 @@
 {
-  "name": "E-commerce",
+  "name": "ecommerce",
   "version": "1.0.0",
   "description": "In-class example for E-commerce ",
   "main": "index.js",
@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "flatted": "^3.1.1",
-    "fs": "0.0.1-security",
     "node": "^15.8.0",
     "nodemon": "^2.0.7",
     "uuid": "^8.3.2"
