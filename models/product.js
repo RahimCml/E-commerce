@@ -5,8 +5,8 @@ class Product {
         this.seller = seller 
         this.customer = customer     
     }
-    static create({name, price}) {
-        return new Product(name, price)
+    static create({productName, price}) {
+        return new Product(productName, price)
     }
     
 }

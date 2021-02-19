@@ -11,10 +11,10 @@ const chanel = Seller.create({name: 'Chanel'})
 const cucci = Seller.create({name: 'Cucci'})
 
 
-const jeans = Product.create({name:'Jeans', price: 50})
-const sweater = Product.create({name:'Sweater', price: 65})
-const tShirt = Product.create({name:'T-shirt', price: 15})
-const parfum = Product.create({name:'Parfum', price:90})
+const jeans = Product.create({productName:'Jeans', price: 50})
+const sweater = Product.create({productName:'Sweater', price: 65})
+const tShirt = Product.create({productName:'T-shirt', price: 15})
+const parfum = Product.create({productName:'Parfum', price:90})
 
 
 
@@ -38,7 +38,8 @@ function printSelectHistory(customer){
 
 // customers save yapiyor 
 customerDatabase.save([pasha, kenan])
-
+sellerDatabase.save([chuba, cucci, chanel])
+// productDatabase.save([jeans, sweater, tShirt, parfum])
 
 
 const leyla = Customer.create({name: 'Leyla', address: 'Karabakh'})
@@ -48,14 +49,17 @@ customerDatabase.insert( leyla, 'customers')
 // leyla.buyProduct(tShirt, chuba)
 
 // secilen indexdeki customeri silir 
-// customerDatabase.remove(1 , 'customers')
+// customerDatabase.remove( , 'customers')
 
 // customers load yapiyor
 const customers = customerDatabase.load()
 customers.forEach(printSelectHistory)
 
+// aranin bir seyin bulunmasi name, address
+console.log(customerDatabase.findBy('name', 'Leyla'))
+// console.log(sellerDatabase.findBy('name', 'Cucci'))
+// console.log(productDatabase.findBy('productName', 'parfum'))
 
-
-// console.log(customers[2])
-console.log(leyla)
+// console.log(customers[0])
+// console.log(leyla)
 // customers.forEach(p => console.log(p.name))

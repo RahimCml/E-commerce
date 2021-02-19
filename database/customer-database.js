@@ -8,7 +8,6 @@ class CustomerDatabase extends BaseDatabase {
     findByAddress (address) {
         return this.findBy('address', address)
     }
- 
 }
 
 module.exports = new CustomerDatabase(Customer)

@@ -1,76 +1,70 @@
 [[
   "1",
   "2",
-  "3",
-  "4"
+  "3"
 ],{
-  "id": "5",
-  "name": "6",
-  "address": "7",
-  "basket": "8"
+  "id": "4",
+  "name": "5",
+  "address": "6",
+  "basket": "7"
 },{
-  "id": "9",
-  "name": "10",
-  "address": "11",
-  "basket": "12"
+  "id": "8",
+  "name": "9",
+  "address": "10",
+  "basket": "11"
 },{
-  "id": "13",
-  "name": "14",
-  "address": "15",
-  "basket": "16"
+  "id": "12",
+  "name": "13",
+  "address": "14",
+  "basket": "15"
+},"899beaf9-3ea6-40e0-ab7c-a079dd8aad16","Pasha","Baku",[
+  "16",
+  "17",
+  "18"
+],"dd292032-4195-453b-bca4-ad05129ef201","Kenan","Ganja",[
+  "19"
+],"173411bf-577b-4f6e-94da-2641faae10ab","Leyla","Karabakh",[],{
+  "productName": "20",
+  "seller": "21",
+  "customer": "22"
 },{
-  "id": "17",
-  "name": "14",
-  "address": "15",
-  "basket": "18"
-},"62673256-97b2-450e-a344-9abfe2b1ba9a","Pasha","Baku",[
-  "19",
-  "20",
-  "21"
-],"aa6268aa-7085-4477-9032-aa96cd28cd74","Kenan","Ganja",[
-  "22"
-],"e8691bb2-6b8c-4e15-bad4-885fb23979a5","Leyla","Karabakh",[],"ab9da658-3f9b-4411-b072-9606543eda73",[],{
   "productName": "23",
   "seller": "24",
-  "customer": "25"
+  "customer": "22"
 },{
-  "productName": "26",
-  "seller": "27",
-  "customer": "25"
+  "productName": "25",
+  "seller": "26",
+  "customer": "22"
 },{
-  "productName": "28",
-  "seller": "29",
-  "customer": "25"
+  "productName": "27",
+  "seller": "26",
+  "customer": "28"
 },{
-  "productName": "30",
-  "seller": "29",
-  "customer": "31"
-},{
-  "productName": "32",
+  "productName": "29",
   "price": 50
 },{
-  "name": "33"
+  "name": "30"
 },{
-  "id": "5",
-  "name": "6",
-  "address": "7",
-  "basket": "8"
+  "id": "4",
+  "name": "5",
+  "address": "6",
+  "basket": "7"
 },{
-  "productName": "34",
+  "productName": "31",
   "price": 65
 },{
-  "name": "35"
+  "name": "32"
 },{
-  "productName": "36",
+  "productName": "33",
   "price": 15
 },{
-  "name": "37"
+  "name": "34"
 },{
-  "productName": "38",
+  "productName": "35",
   "price": 90
 },{
-  "id": "9",
-  "name": "10",
-  "address": "11",
-  "basket": "12"
+  "id": "8",
+  "name": "9",
+  "address": "10",
+  "basket": "11"
 },"Jeans","Cucci","Sweater","Chuba","T-shirt","Chanel","Parfum"]
