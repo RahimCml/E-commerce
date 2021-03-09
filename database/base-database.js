@@ -6,32 +6,41 @@ class BaseDatabase {
         this.model = model 
         this.fileName = model.name.toLowerCase()
     } 
-    save (objects) {
-        fs.writeFileSync(`./models/${this.fileName}.json`, flatted.stringify(objects, null, 2))
+    save(objects) {
+        return new Promise((resolve, reject) => {
+            fs.writeFile(`${__dirname}/${this.fileName}.json`, flatted.stringify(objects, null, 2), (err) => {
+                if (err) return reject(err)
+                resolve()
+            })
+        })
     }
     
     load () {
-        const file = fs.readFileSync(`./models/${this.fileName}.json`, 'utf8')
-        const objects = flatted.parse(file)
-
-        return objects.map(this.model.create)
+        return new Promise((resolve, reject) => {
+            fs.readFile(`${__dirname}/${this.fileName}.json`, 'utf8', (err, file) => {
+                if (err) return reject(err)
+        
+                const objects = flatted.parse(file)
+                resolve(objects.map(this.model.create))
+            })
+        })
     }
     
-    insert (object) {
-        const objects = this.load ()
+    async insert (object) {
+        const objects = await this.load ()
 
         this.save(objects.concat(object)) 
     } 
     
-    remove (index) {
-        const objects = this.load ()
+    async remove (index) {
+        const objects = await this.load ()
         
         objects.splice(index, 1)
         this.save(objects)
     }
     
-    update (object) {
-        const objects = this.load()
+    async update (object) {
+        const objects = await this.load()
  
         const index = objects.findIndex(o => o.id == object.id)
 
@@ -41,11 +50,13 @@ class BaseDatabase {
         this.save(objects)
     }
 
-    findBy (property, value) {
-        return this.load().find( o => o[property] == value)
+    async find(id){
+        return (await this.load()).find(o => o.id == id)
     }
 
-    
+    async findBy (property, value) {
+        return (await this.load()).find( o => o[property] == value)
+    }
 }
 
 
