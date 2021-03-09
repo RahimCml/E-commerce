@@ -2,6 +2,7 @@ const Customer = require ('./models/customer')
 const Seller = require ('./models/seller')
 const Product = require ('./models/product')
 const {customerDatabase, sellerDatabase, productDatabase} = require ('./database')
+const printSelectHistory = require('./lib/printSelectHistory')
 
 const pasha =  Customer.create({name: 'Pasha', address: 'Baku'})
 const kenan = Customer.create({name:'Kenan', address: 'Ganja'})
@@ -10,31 +11,15 @@ const chuba = Seller.create({name: 'Chuba'})
 const chanel = Seller.create({name: 'Chanel'})
 const cucci = Seller.create({name: 'Cucci'})
 
-
 const jeans = Product.create({productName:'Jeans', price: 50})
 const sweater = Product.create({productName:'Sweater', price: 65})
 const tShirt = Product.create({productName:'T-shirt', price: 15})
 const parfum = Product.create({productName:'Parfum', price:90})
 
-
-
-
 pasha.buyProduct (jeans, cucci)
 pasha.buyProduct (sweater, chuba)
 pasha.buyProduct (tShirt, chanel)
 kenan.buyProduct (parfum, chanel)
-
-function printSelect (selectedproduct) {
-    console.log(`${selectedproduct.customer.name} has chosen the ${selectedproduct.productName.productName} from ${selectedproduct.seller.name}, address: ${selectedproduct.customer.address}, price: ${selectedproduct.productName.price}`)
-}
-
-function printSelectHistory(customer){
-        if (customer.basket.length === 0)
-        return console.log (`${customer.name} basket is empty `)
-        
-    customer.basket.forEach(printSelect)
-}
-
 
 // customers save yapiyor 
 customerDatabase.save([pasha, kenan])
@@ -57,7 +42,7 @@ customers.forEach(printSelectHistory)
 
 // aranin bir seyin bulunmasi name, address
 console.log(customerDatabase.findBy('name', 'Leyla'))
-// console.log(sellerDatabase.findBy('name', 'Cucci'))
+console.log(sellerDatabase.findBy('name', 'Cucci'))
 // console.log(productDatabase.findBy('productName', 'parfum'))
 
 // console.log(customers[0])
