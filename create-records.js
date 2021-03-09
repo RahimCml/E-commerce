@@ -21,28 +21,31 @@ pasha.buyProduct (sweater, chuba)
 pasha.buyProduct (tShirt, chanel)
 kenan.buyProduct (parfum, chanel)
 
-// customers save yapiyor 
-customerDatabase.save([pasha, kenan])
-sellerDatabase.save([chuba, cucci, chanel])
-// productDatabase.save([jeans, sweater, tShirt, parfum])
+async function main() {
+    try {
+        // customers save yapiyor 
+        await customerDatabase.save([pasha, kenan])
+        await sellerDatabase.save([chuba, cucci, chanel])
+        // productDatabase.save([jeans, sweater, tShirt, parfum])
 
+        const leyla = Customer.create({name: 'Leyla', address: 'Karabakh'})
 
-const leyla = Customer.create({name: 'Leyla', address: 'Karabakh'})
+        await customerDatabase.insert( leyla, 'customers')
 
-customerDatabase.insert( leyla, 'customers')
+        // leyla.buyProduct(tShirt, chuba)
+        // secilen indexdeki customeri silir 
+        // customerDatabase.remove( , 'customers')
 
-// leyla.buyProduct(tShirt, chuba)
-// secilen indexdeki customeri silir 
-// customerDatabase.remove( , 'customers')
+        // customers load yapiyor
+        const customers = await customerDatabase.load()
+        customers.forEach(printSelectHistory)
 
-// customers load yapiyor
-const customers = customerDatabase.load()
-customers.forEach(printSelectHistory)
+        // console.log(customers[0])
+        // console.log(leyla)
+        // customers.forEach(p => console.log(p.name))
+    } catch (e){
+        return console.log(e)
+    }
+}
 
-// aranin bir seyin bulunmasi name, address
-console.log(customerDatabase.findBy('name', 'Leyla'))
-console.log(sellerDatabase.findBy('name', 'Cucci'))
-// console.log(productDatabase.findBy('productName', 'parfum'))
-// console.log(customers[0])
-// console.log(leyla)
-// customers.forEach(p => console.log(p.name))
+main()
