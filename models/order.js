@@ -20,8 +20,5 @@ class Order {
 		this.date = date;
 		this.address = address;
 	}
-	// 	static create({ name, price, products }) {
-	// 		return new Order(name, price, products);
-	// 	}
 }
 module.exports = Order;
