@@ -1,7 +1,7 @@
 const Customer = require("./models/customer");
 const Seller = require("./models/seller");
 const Product = require("./models/product");
-const printSelectHistory = require("./lib/printSelectHistory");
+const printSelectedOrders = require("./lib/printSelectedOrders");
 const {
 	customerDatabase,
 	sellerDatabase,
@@ -42,7 +42,7 @@ async function main() {
 
 		// customers load yapiyor
 		const customers = await customerDatabase.load();
-		customers.forEach(printSelectHistory);
+		customers.forEach(printSelectedOrders);
 
 		// console.log(customers[0]);
 		// console.log(leyla);
