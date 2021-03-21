@@ -1,11 +1,11 @@
 class Seller {
-	constructor(name) {
-		this.name = name;
-	}
+  constructor(name) {
+    this.name = name
+  }
 
-	static create({ name }) {
-		return new Seller(name);
-	}
+  static create({ name }) {
+    return new Seller(name)
+  }
 }
 
-module.exports = Seller;
+module.exports = Seller

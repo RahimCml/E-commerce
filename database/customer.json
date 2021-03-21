@@ -17,54 +17,44 @@
   "name": "13",
   "address": "14",
   "basket": "15"
-},"00fd99aa-a161-4343-854e-977b10c7669f","Pasha","Baku",[
-  "16",
+},"afc6a41a-da2f-43e6-bdc9-9fb0988638ac","Kenan","Ganja",[
+  "16"
+],"6a39ac2f-0e1b-4a33-b95e-917fc082631a","Pasha","Baku",[
   "17",
-  "18"
-],"47b99672-ee86-4e7e-be4a-e2067de27025","Kenan","Ganja",[
+  "18",
   "19"
-],"e2ab49ed-ddab-436e-ae20-b8eefee1466e","Leyla","Karabakh",[],{
-  "productName": "20",
-  "seller": "21",
-  "customer": "22"
+],"17b06023-f288-4d7f-b0b3-4a077642463a","Leyla","Karabakh",[],{
+  "name": "20",
+  "product": "21",
+  "seller": "1"
 },{
-  "productName": "23",
-  "seller": "24",
-  "customer": "22"
+  "name": "22",
+  "product": "23",
+  "seller": "2"
 },{
-  "productName": "25",
-  "seller": "26",
-  "customer": "22"
+  "name": "24",
+  "product": "25",
+  "seller": "2"
 },{
-  "productName": "27",
-  "seller": "26",
-  "customer": "28"
+  "name": "26",
+  "product": "21",
+  "seller": "2"
 },{
-  "productName": "29",
+  "name": "27",
+  "price": 90
+},{
+  "name": "28"
+},{
+  "name": "29",
   "price": 50
 },{
   "name": "30"
 },{
-  "id": "4",
-  "name": "5",
-  "address": "6",
-  "basket": "7"
-},{
-  "productName": "31",
+  "name": "31",
   "price": 65
 },{
   "name": "32"
 },{
-  "productName": "33",
+  "name": "33",
   "price": 15
-},{
-  "name": "34"
-},{
-  "productName": "35",
-  "price": 90
-},{
-  "id": "8",
-  "name": "9",
-  "address": "10",
-  "basket": "11"
-},"Jeans","Cucci","Sweater","Chuba","T-shirt","Chanel","Parfum"]
+},"Parfum","Chanel","Jeans","Cucci","Sweater","Chuba","T-shirt"]

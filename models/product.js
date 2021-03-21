@@ -1,12 +1,13 @@
 class Product {
-	constructor(productName, price, seller, customer) {
-		this.productName = productName;
+	constructor(name, price, product, seller, customer) {
+		this.name = name;
+		this.product = product;
 		this.price = price;
 		this.seller = seller;
 		this.customer = customer;
 	}
-	static create({ productName, price }) {
-		return new Product(productName, price);
+	static create({ name, price }) {
+		return new Product(name, price);
 	}
 }
 module.exports = Product;

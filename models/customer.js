@@ -19,11 +19,6 @@ class Customer {
 	static create({ id, name, address, basket }) {
 		return new Customer(id, name, address, basket);
 	}
-	// user () {
-	//     const chuba = new Seller('Chuba')
-	//     const chanel = new Seller('Chanel')
-	//     const cucci = new Seller('Cucci')
-	// }
 }
 
 module.exports = Customer;

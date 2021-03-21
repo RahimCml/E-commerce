@@ -1,10 +1,10 @@
-const BaseDatabase = require("./base-database");
-const Product = require("../models/product");
+const BaseDatabase = require('./base-database')
+const Product = require('../models/product')
 
 class ProductDatabase extends BaseDatabase {
-	findByName(productName) {
-		return this.findBy("productName", productName);
-	}
+  findByName(name) {
+    return this.findBy('name', name)
+  }
 }
 
-module.exports = new ProductDatabase(Product);
+module.exports = new ProductDatabase(Product)

@@ -1,70 +1,97 @@
-[[
-  "1",
-  "2",
-  "3"
-],{
-  "id": "4",
-  "name": "5",
-  "address": "6",
-  "basket": "7"
-},{
-  "id": "8",
-  "name": "9",
-  "address": "10",
-  "basket": "11"
-},{
-  "id": "12",
-  "name": "13",
-  "address": "14",
-  "basket": "15"
-},"da295e55-c19c-4b0c-9d8f-f820b32c1ab9","Pasha","Baku",[
-  "16",
-  "17",
-  "18"
-],"52cb5e31-05cb-4ac2-976e-52e2d8d014ae","Kenan","Ganja",[
-  "19"
-],"cbaf0f35-f0b6-4600-966b-d626eac9fc36","Leyla","Karabakh",[],{
-  "productName": "20",
-  "seller": "21",
-  "customer": "22"
-},{
-  "productName": "23",
-  "seller": "24",
-  "customer": "22"
-},{
-  "productName": "25",
-  "seller": "26",
-  "customer": "22"
-},{
-  "productName": "27",
-  "seller": "26",
-  "customer": "28"
-},{
-  "productName": "29",
-  "price": 50
-},{
-  "name": "30"
-},{
-  "id": "4",
-  "name": "5",
-  "address": "6",
-  "basket": "7"
-},{
-  "productName": "31",
-  "price": 65
-},{
-  "name": "32"
-},{
-  "productName": "33",
-  "price": 15
-},{
-  "name": "34"
-},{
-  "productName": "35",
-  "price": 90
-},{
-  "id": "8",
-  "name": "9",
-  "address": "10",
-  "basket": "11"
-},"Jeans","Cucci","Sweater","Chuba","T-shirt","Chanel","Parfum"]
+[
+	[ "1", "2", "3" ],
+	{
+		"id": "4",
+		"name": "5",
+		"address": "6",
+		"basket": "7"
+	},
+	{
+		"id": "8",
+		"name": "9",
+		"address": "10",
+		"basket": "11"
+	},
+	{
+		"id": "12",
+		"name": "13",
+		"address": "14",
+		"basket": "15"
+	},
+	"da295e55-c19c-4b0c-9d8f-f820b32c1ab9",
+	"Pasha",
+	"Baku",
+	[ "16", "17", "18" ],
+	"52cb5e31-05cb-4ac2-976e-52e2d8d014ae",
+	"Kenan",
+	"Ganja",
+	[ "19" ],
+	"cbaf0f35-f0b6-4600-966b-d626eac9fc36",
+	"Leyla",
+	"Karabakh",
+	[],
+	{
+		"product": "20",
+		"seller": "21",
+		"customer": "22"
+	},
+	{
+		"product": "23",
+		"seller": "24",
+		"customer": "22"
+	},
+	{
+		"product": "25",
+		"seller": "26",
+		"customer": "22"
+	},
+	{
+		"product": "27",
+		"seller": "26",
+		"customer": "28"
+	},
+	{
+		"product": "29",
+		"price": 50
+	},
+	{
+		"name": "30"
+	},
+	{
+		"id": "4",
+		"name": "5",
+		"address": "6",
+		"basket": "7"
+	},
+	{
+		"product": "31",
+		"price": 65
+	},
+	{
+		"name": "32"
+	},
+	{
+		"product": "33",
+		"price": 15
+	},
+	{
+		"name": "34"
+	},
+	{
+		"product": "35",
+		"price": 90
+	},
+	{
+		"id": "8",
+		"name": "9",
+		"address": "10",
+		"basket": "11"
+	},
+	"Jeans",
+	"Cucci",
+	"Sweater",
+	"Chuba",
+	"T-shirt",
+	"Chanel",
+	"Parfum"
+]
