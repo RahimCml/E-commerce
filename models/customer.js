@@ -1,23 +1,23 @@
-const Product = require("./product");
+const Order = require("./order");
 const uuid = require("uuid");
 
 class Customer {
-	constructor(id = uuid.v4(), name, address, basket = []) {
+	constructor(id = uuid.v4(), name, address, orders = [], basket = []) {
 		this.id = id;
 		this.name = name;
 		this.address = address; // seller'in customer addressini gormesini asgla
 		this.basket = basket;
+		this.orders = orders;
 	}
-	buyProduct(productName, seller, price) {
-		const selectedProduct = new Product(productName, price, seller, this);
+	buyProduct(products, seller) {
+		const selectedOrder = new Order(products, seller, this);
 
-		this.basket.push(selectedProduct);
+		this.orders.push(selectedOrder);
 
-		return selectedProduct;
+		return selectedOrder;
 	}
-
-	static create({ id, name, address, basket }) {
-		return new Customer(id, name, address, basket);
+	static create({ id, name, address, orders, basket }) {
+		return new Customer(id, name, address, orders, basket);
 	}
 }
 
