@@ -1,6 +1,6 @@
 const express = require('express')
-const ProductDatabase = require('./database/product-database')
 const flatted = require('flatted')
+const productDatabase = require('./database/product-database')
 
 const app = express()
 
@@ -17,6 +17,7 @@ app.get('/products', async (req, res) => {
 
 app.get('/products/:productId', async (req, res) => {
   const product = await productDatabase.find(req.params.productId)
+  if (!product) return res.status(404).send('Cannot find product')
   res.render('product', { product })
 })
 
