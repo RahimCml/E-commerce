@@ -10,10 +10,14 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-app.get('/product', async (req, res) => {
-  const product = await ProductDatabase.load()
+app.get('/products', async (req, res) => {
+  const products = await ProductDatabase.load()
+  res.render('products', { products })
+})
+
+app.get('/products/:productId', async (req, res) => {
+  const product = await productDatabase.find(req.params.productId)
   res.render('product', { product })
-  //   res.send(flatted.stringify(prodcut))
 })
 
 app.listen(3000, () => {

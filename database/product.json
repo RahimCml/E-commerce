@@ -2,19 +2,19 @@
   ["1", "2", "3", "4"],
   {
     "name": "5",
-    "price": 50
+    "price": 90
   },
   {
     "name": "6",
-    "price": 530
+    "price": 50
   },
   {
     "name": "7",
-    "price": 550
+    "price": 65
   },
   {
     "name": "8",
-    "price": 90
+    "price": 15
   },
   "Jeans",
   "Sweater",

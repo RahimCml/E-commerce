@@ -20,13 +20,13 @@
   "address": "16",
   "basket": "17",
   "orders": "18"
-},"adcc29af-2c1f-4aa7-863b-5552c49fc0dc","Kenan","Ganja",[],[
+},"33eb74c2-b3bc-4b76-8a12-2c6f4c1fe336","Kenan","Ganja",[],[
   "19"
-],"711fe7dc-37d6-42df-9881-3373da133aa4","Pasha","Baku",[],[
+],"e2e4eec0-3ded-4a6c-94b8-4b49621659b8","Pasha","Baku",[],[
   "20",
   "21",
   "22"
-],"89b4e9c5-5faa-4fb0-8ebc-c21c3ba1bf27","Leyla","Karabakh",[],[],{
+],"0c4e1427-ea2b-405d-8432-b21f76ea6c5f","Leyla","Karabakh",[],[],{
   "products": "23",
   "seller": "24",
   "customer": "1"
@@ -43,21 +43,25 @@
   "seller": "24",
   "customer": "2"
 },{
-  "name": "30",
+  "id": "30",
+  "name": "31",
   "price": 90
 },{
-  "name": "31"
+  "name": "32"
 },{
-  "name": "32",
-  "price": 50
-},{
-  "name": "33"
-},{
+  "id": "33",
   "name": "34",
-  "price": 65
+  "price": 50
 },{
   "name": "35"
 },{
-  "name": "36",
+  "id": "36",
+  "name": "37",
+  "price": 65
+},{
+  "name": "38"
+},{
+  "id": "39",
+  "name": "40",
   "price": 15
-},"Parfum","Chanel","Jeans","Cucci","Sweater","Chuba","T-shirt"]
+},"0a9f110b-34ba-45c9-af98-2e7f41fd6082","Parfum","Chanel","fc329374-dfb3-43c4-9375-fc2bf9fda440","Jeans","Cucci","871cc783-9abc-4fa5-bb18-c9d131355172","Sweater","Chuba","b44c2608-7157-44f6-bf9b-9083e835dcca","T-shirt"]
