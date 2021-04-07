@@ -12,4 +12,6 @@ html(lang="en")
         h1 Welcome Product Page 
         p number of products on sale #{products.length}
 
-
+        ol 
+            each product in products
+                li  #{product.name} price #{product.price}
