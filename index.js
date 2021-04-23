@@ -2,8 +2,11 @@ const express = require('express')
 const ProductDatabase = require('./database/product-database')
 const flatted = require('flatted')
 const productDatabase = require('./database/product-database')
+const Product = require('./models/product')
+const bodyParser = require('body-parser')
 
 const app = express()
+app.use(bodyParser.json())
 
 app.set('view engine', 'pug')
 
