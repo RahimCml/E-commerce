@@ -23,6 +23,8 @@ app.post('/products', async (req, res) => {
   res.send(product)
 })
 
+app.delete('/products/:productId', async (req, res) => {})
+
 app.get('/products/:productId', async (req, res) => {
   const product = await productDatabase.find(req.params.productId)
   if (!product) return res.status(404).send('Cannot find product')
