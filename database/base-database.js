@@ -34,6 +34,7 @@ class BaseDatabase {
     const objects = await this.load()
 
     if (!(object instanceof this.model)) {
+      object = this.model.create(object)
     }
 
     this.save(objects.concat(object))
