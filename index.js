@@ -19,6 +19,12 @@ app.get('/products', async (req, res) => {
   res.render('products', { products })
 })
 
+app.post('/products', async (req, res) => {
+  const product = Product.create(req.body)
+  await productDatabase.insert(product)
+  res.send(product)
+})
+
 app.get('/products/:productId', async (req, res) => {
   const product = await productDatabase.find(req.params.productId)
   if (!product) return res.status(404).send('Cannot find product')
