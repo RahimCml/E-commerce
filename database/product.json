@@ -1,23 +1,27 @@
-[
-  ["1", "2", "3", "4"],
-  {
-    "name": "5",
-    "price": 90
-  },
-  {
-    "name": "6",
-    "price": 50
-  },
-  {
-    "name": "7",
-    "price": 65
-  },
-  {
-    "name": "8",
-    "price": 15
-  },
-  "Jeans",
-  "Sweater",
-  "T-shirt",
-  "parfum"
-]
+[[
+  "1",
+  "2",
+  "3",
+  "4",
+  "5"
+],{
+  "id": "6",
+  "name": "7",
+  "price": 90
+},{
+  "id": "8",
+  "name": "9",
+  "price": 50
+},{
+  "id": "10",
+  "name": "11",
+  "price": 65
+},{
+  "id": "12",
+  "name": "13",
+  "price": 15
+},{
+  "id": "14",
+  "name": "15",
+  "price": 95
+},"96c1e055-0a85-43b0-b117-110dc13618b6","Jeans","3501cf14-ee9b-499d-b28b-44ae0136e1e8","Sweater","801b4ad2-b3ec-4793-a688-d85e1fbe04b0","T-shirt","c10122ff-cc71-4c2a-9416-327cf7afb1f1","parfum","b61e3fde-7d7f-4144-a4da-c17ef6e1b01a","kot"]
