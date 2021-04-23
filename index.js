@@ -2,7 +2,6 @@ const express = require('express')
 const ProductDatabase = require('./database/product-database')
 const flatted = require('flatted')
 const productDatabase = require('./database/product-database')
-const Product = require('./models/product')
 const bodyParser = require('body-parser')
 
 const app = express()
@@ -20,8 +19,7 @@ app.get('/products', async (req, res) => {
 })
 
 app.post('/products', async (req, res) => {
-  const product = Product.create(req.body)
-  await productDatabase.insert(product)
+  const product = await productDatabase.insert(req.body)
   res.send(product)
 })
 
