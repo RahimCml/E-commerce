@@ -23,7 +23,9 @@ app.post('/products', async (req, res) => {
   res.send(product)
 })
 
-app.delete('/products/:productId', async (req, res) => {})
+app.delete('/products/:productId', async (req, res) => {
+  await productDatabase.removeBy('id', req.params.productId)
+})
 
 app.get('/products/:productId', async (req, res) => {
   const product = await productDatabase.find(req.params.productId)
