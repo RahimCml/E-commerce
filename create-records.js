@@ -26,6 +26,10 @@ pasha.buyProduct(sweater, chuba)
 pasha.buyProduct(tShirt, chanel)
 kenan.buyProduct(parfum, chanel)
 
+// jeans.infoProduct(chuba)
+// tShirt.infoProduct(chanel)
+// parfum.infoProduct(chanel)
+
 async function main() {
   try {
     const leyla = Customer.create({ name: 'Leyla', address: 'Karabakh' })

@@ -1,5 +1,5 @@
 const express = require('express')
-const ProductDatabase = require('./database/product-database')
+const ProductDatabase = require('./database')
 const flatted = require('flatted')
 const productDatabase = require('./database/product-database')
 const bodyParser = require('body-parser')
