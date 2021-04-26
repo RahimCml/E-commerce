@@ -1,5 +1,5 @@
 const express = require('express')
-const ProductDatabase = require('./database')
+const { ProductDatabase, sellerDatabase } = require('./database')
 const flatted = require('flatted')
 const productDatabase = require('./database/product-database')
 const bodyParser = require('body-parser')
@@ -31,6 +31,15 @@ app.get('/products/:productId', async (req, res) => {
   const product = await productDatabase.find(req.params.productId)
   if (!product) return res.status(404).send('Cannot find product')
   res.render('product', { product })
+})
+
+app.post('/products/:productId/seller', async (req, res) => {
+  const product = await ProductDatabase.find(req.params.productId)
+  const seller = await sellerDatabase.find(req.query.sellerId)
+
+  await ProductDatabase.update(product)
+
+  res.send(flatted.stringify(product))
 })
 
 app.listen(3000, () => {
