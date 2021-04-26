@@ -1,0 +1,14 @@
+extends layout 
+block content
+        h2 information
+        
+        p  #{product.name}
+            
+            if product.info.length
+                ol 
+                    each seller in products.length
+                        li #{seller.name}
+            else 
+                p no information
+                    
+
