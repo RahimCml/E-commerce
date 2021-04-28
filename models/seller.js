@@ -6,7 +6,7 @@ class Seller {
     this.name = name
   }
 
-  static create({id, name }) {
+  static create({ id, name }) {
     return new Seller(id, name)
   }
 }

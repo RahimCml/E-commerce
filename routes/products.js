@@ -1,11 +1,10 @@
-const { ProductDatabase, sellerDatabase } = require('../database')
-const productDatabase = require('../database/product-database')
+const { productDatabase, sellerDatabase } = require('../database')
 const flatted = require('flatted')
 
 const router = require('express').Router()
 
 router.get('/', async (req, res) => {
-  const products = await ProductDatabase.load()
+  const products = await productDatabase.load()
   res.render('products', { products })
 })
 
@@ -26,10 +25,15 @@ router.get('/:productId', async (req, res) => {
 })
 
 router.post('/:productId/seller', async (req, res) => {
-  const product = await ProductDatabase.find(req.params.productId)
-  const seller = await sellerDatabase.find(req.query.sellerId)
+  const { productId } = req.params
+  const { sellerId } = req.body
 
-  await ProductDatabase.update(product)
+  const product = await ProductDatabase.find(productId)
+  const seller = await sellerDatabase.find(sellerId)
+
+  // product.info(this)
+
+  await productDatabase.update(product)
 
   res.send(flatted.stringify(product))
 })

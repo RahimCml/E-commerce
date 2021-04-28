@@ -6,17 +6,39 @@
 ],{
   "id": "5",
   "name": "6",
-  "price": 90
+  "price": 50,
+  "info": "7"
 },{
-  "id": "7",
-  "name": "8",
-  "price": 50
-},{
-  "id": "9",
-  "name": "10",
-  "price": 65
+  "id": "8",
+  "name": "9",
+  "price": 65,
+  "info": "10"
 },{
   "id": "11",
   "name": "12",
-  "price": 15
-},"96c1e055-0a85-43b0-b117-110dc13618b6","Jeans","3501cf14-ee9b-499d-b28b-44ae0136e1e8","Sweater","801b4ad2-b3ec-4793-a688-d85e1fbe04b0","T-shirt","c10122ff-cc71-4c2a-9416-327cf7afb1f1","parfum"]
+  "price": 15,
+  "info": "13"
+},{
+  "id": "14",
+  "name": "15",
+  "price": 90,
+  "info": "16"
+},"ddcd09d1-5899-4612-a984-40f3a5e5f4d3","Jeans",[
+  "17"
+],"af387163-090a-40cc-b68f-122b1111e3d3","Sweater",[],"1c623944-6ed5-4ebc-b514-90fe119092ee","T-shirt",[
+  "18"
+],"cc23943f-73c2-4a35-80dc-d53537b0fcb0","Parfum",[
+  "19"
+],{
+  "id": "20"
+},{
+  "id": "21"
+},{
+  "id": "21"
+},{
+  "id": "22",
+  "name": "23"
+},{
+  "id": "24",
+  "name": "25"
+},"9edbacca-0287-4305-85e7-9a020d8ef56f","Chuba","60e15bba-1b2e-4682-a226-d03172226299","Chanel"]

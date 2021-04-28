@@ -6,15 +6,14 @@ const {
   customerDatabase,
   sellerDatabase,
   productDatabase,
-  ProductDatabase,
 } = require('./database')
 
 const pasha = Customer.create({ name: 'Pasha', address: 'Baku' })
 const kenan = Customer.create({ name: 'Kenan', address: 'Ganja' })
 
-const chuba = Seller.create({ name: 'Chuba' })
-const chanel = Seller.create({ name: 'Chanel' })
-const cucci = Seller.create({ name: 'Cucci' })
+const chuba = Seller.create({ namee: 'Chuba' })
+const chanel = Seller.create({ namee: 'Chanel' })
+const cucci = Seller.create({ namee: 'Cucci' })
 
 const jeans = Product.create({ name: 'Jeans', price: 50 })
 const sweater = Product.create({ name: 'Sweater', price: 65 })
@@ -26,32 +25,23 @@ pasha.buyProduct(sweater, chuba)
 pasha.buyProduct(tShirt, chanel)
 kenan.buyProduct(parfum, chanel)
 
-// jeans.infoProduct(chuba)
-// tShirt.infoProduct(chanel)
-// parfum.infoProduct(chanel)
+jeans.infoProduct(chuba)
+tShirt.infoProduct(chanel)
+parfum.infoProduct(chanel)
 
 async function main() {
   try {
     const leyla = Customer.create({ name: 'Leyla', address: 'Karabakh' })
 
-    // customers save yapiyor
     await customerDatabase.save([kenan, pasha, leyla])
-    await sellerDatabase.save([chuba, cucci, chanel])
-    //productDatabase de save tanimiyor
-    // await productDatabase.save([jeans, sweater, tShirt, parfum])
-    await ProductDatabase.load()
-    // await customerDatabase.insert(leyla, 'customers')
-    // leyla.buyProduct(tShirt, chuba)
-    // secilen indexdeki customeri silir
-    // customerDatabase.remove( , 'customers')
 
-    // customers load yapiyor
+    await sellerDatabase.save([chuba, cucci, chanel])
+
+    await productDatabase.save([jeans, sweater, tShirt, parfum])
+    await productDatabase.load()
+
     const customers = await customerDatabase.load()
     customers.forEach(printSelectedOrders)
-
-    // console.log(customers[0]);
-    // console.log(leyla);
-    // customers.forEach(p => console.log(p.name))
   } catch (e) {
     return console.log(e)
   }
