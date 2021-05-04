@@ -41,5 +41,7 @@ router.post('/:productId/seller', async (req, res) => {
 
 router.patch('./productId', async (req, res) => {
   const { name } = req.body
+
+  await productDatabase.update({ name })
 })
 module.exports = router
