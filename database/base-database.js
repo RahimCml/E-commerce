@@ -1,22 +1,10 @@
-const fs = require('fs')
-const flatted = require('flatted')
-
 class BaseDatabase {
   constructor(model) {
     this.model = model
     this.fileName = model.name.toLowerCase()
   }
   save(objects) {
-    return new Promise((resolve, reject) => {
-      fs.writeFile(
-        `${__dirname}/${this.fileName}.json`,
-        flatted.stringify(objects, null, 2),
-        (err) => {
-          if (err) return reject(err)
-          resolve()
-        },
-      )
-    })
+    return this.model.insertMany(objects)
   }
 
   load() {
