@@ -1,86 +1,122 @@
-[[
-  "1",
-  "2",
-  "3"
-],{
-  "id": "4",
-  "name": "5",
-  "address": "6",
-  "basket": "7",
-  "orders": "8"
-},{
-  "id": "9",
-  "name": "10",
-  "address": "11",
-  "basket": "12",
-  "orders": "13"
-},{
-  "id": "14",
-  "name": "15",
-  "address": "16",
-  "basket": "17",
-  "orders": "18"
-},"b18a6665-9afa-4ffa-b785-3cf3262f4ad9","Kenan","Ganja",[],[
-  "19"
-],"48056ebd-ad20-4443-855c-23699d704d4c","Pasha","Baku",[],[
-  "20",
-  "21",
-  "22"
-],"d570600d-d4d7-4330-b48e-00d30a5369e8","Leyla","Karabakh",[],[],{
-  "products": "23",
-  "seller": "24",
-  "customer": "1"
-},{
-  "products": "25",
-  "seller": "26",
-  "customer": "2"
-},{
-  "products": "27",
-  "seller": "28",
-  "customer": "2"
-},{
-  "products": "29",
-  "seller": "24",
-  "customer": "2"
-},{
-  "id": "30",
-  "name": "31",
-  "price": 90,
-  "info": "32"
-},{
-  "id": "33",
-  "name": "34"
-},{
-  "id": "35",
-  "name": "36",
-  "price": 50,
-  "info": "37"
-},{
-  "id": "38",
-  "name": "39"
-},{
-  "id": "40",
-  "name": "41",
-  "price": 65,
-  "info": "42"
-},{
-  "id": "43",
-  "name": "44"
-},{
-  "id": "45",
-  "name": "46",
-  "price": 15,
-  "info": "47"
-},"cc23943f-73c2-4a35-80dc-d53537b0fcb0","Parfum",[
-  "48"
-],"60e15bba-1b2e-4682-a226-d03172226299","Chanel","ddcd09d1-5899-4612-a984-40f3a5e5f4d3","Jeans",[
-  "49"
-],"85300063-20bb-4687-af64-698f57f2d02e","Cucci","af387163-090a-40cc-b68f-122b1111e3d3","Sweater",[],"9edbacca-0287-4305-85e7-9a020d8ef56f","Chuba","1c623944-6ed5-4ebc-b514-90fe119092ee","T-shirt",[
-  "50"
-],{
-  "id": "24"
-},{
-  "id": "28"
-},{
-  "id": "24"
-}]
+[
+  ["1", "2", "3"],
+  {
+    "id": "4",
+    "name": "5",
+    "address": "6",
+    "basket": "7",
+    "orders": "8"
+  },
+  {
+    "id": "9",
+    "name": "10",
+    "address": "11",
+    "basket": "12",
+    "orders": "13"
+  },
+  {
+    "id": "14",
+    "name": "15",
+    "address": "16",
+    "basket": "17",
+    "orders": "18"
+  },
+  "b18a6665-9afa-4ffa-b785-3cf3262f4ad9",
+  "Kenan",
+  "Ganja",
+  [],
+  ["19"],
+  "48056ebd-ad20-4443-855c-23699d704d4c",
+  "Pasha",
+  "Baku",
+  [],
+  ["20", "21", "22"],
+  "d570600d-d4d7-4330-b48e-00d30a5369e8",
+  "Leyla",
+  "Karabakh",
+  [],
+  [],
+  {
+    "products": "23",
+    "seller": "24",
+    "customer": "1"
+  },
+  {
+    "products": "25",
+    "seller": "26",
+    "customer": "2"
+  },
+  {
+    "products": "27",
+    "seller": "28",
+    "customer": "2"
+  },
+  {
+    "products": "29",
+    "seller": "24",
+    "customer": "2"
+  },
+  {
+    "id": "30",
+    "name": "31",
+    "price": 90,
+    "info": "32"
+  },
+  {
+    "id": "33",
+    "name": "34"
+  },
+  {
+    "id": "35",
+    "name": "36",
+    "price": 50,
+    "info": "37"
+  },
+  {
+    "id": "38",
+    "name": "39"
+  },
+  {
+    "id": "40",
+    "name": "41",
+    "price": 65,
+    "info": "42"
+  },
+  {
+    "id": "43",
+    "name": "44"
+  },
+  {
+    "id": "45",
+    "name": "46",
+    "price": 15,
+    "info": "47"
+  },
+  "cc23943f-73c2-4a35-80dc-d53537b0fcb0",
+  "Parfum",
+  ["48"],
+  "60e15bba-1b2e-4682-a226-d03172226299",
+  "Chanel",
+  "ddcd09d1-5899-4612-a984-40f3a5e5f4d3",
+  "Jeans",
+  ["49"],
+  "85300063-20bb-4687-af64-698f57f2d02e",
+  "Cucci",
+  "af387163-090a-40cc-b68f-122b1111e3d3",
+  "Sweater",
+  [],
+  "9edbacca-0287-4305-85e7-9a020d8ef56f",
+  "Chuba",
+  "1c623944-6ed5-4ebc-b514-90fe119092ee",
+  "T-shirt",
+  ["50"],
+  {
+    "id": "24"
+  },
+  {
+    "id": "28"
+  },
+  {
+    "id": "24"
+  }
+]
