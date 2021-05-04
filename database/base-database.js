@@ -15,13 +15,6 @@ class BaseDatabase {
     return await this.model.create(object)
   }
 
-  async remove(index) {
-    const objects = await this.load()
-
-    objects.splice(index, 1)
-    this.save(objects)
-  }
-
   async removeBy(property, value) {
     const objects = await this.load()
 
