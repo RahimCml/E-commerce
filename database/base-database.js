@@ -24,7 +24,7 @@ class BaseDatabase {
   }
 
   async find(id) {
-    return (await this.load()).find((o) => o.id == id)
+    return this.model.findById(id)
   }
 
   async findBy(property, value) {
