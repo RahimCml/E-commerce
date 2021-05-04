@@ -39,4 +39,7 @@ router.post('/:productId/seller', async (req, res) => {
   res.send(flatted.stringify(product))
 })
 
+router.patch('./productId', async (req, res) => {
+  const { name } = req.body
+})
 module.exports = router
