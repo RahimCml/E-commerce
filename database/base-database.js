@@ -1,7 +1,6 @@
 class BaseDatabase {
   constructor(model) {
     this.model = model
-    this.fileName = model.name.toLowerCase()
   }
   save(objects) {
     return this.model.insertMany(objects)

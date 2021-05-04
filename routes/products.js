@@ -5,6 +5,7 @@ const router = require('express').Router()
 
 router.get('/', async (req, res) => {
   const products = await productDatabase.load()
+
   res.render('products', { products })
 })
 
@@ -15,7 +16,7 @@ router.post('/', async (req, res) => {
 })
 
 router.delete('/:productId', async (req, res) => {
-  await productDatabase.removeBy('id', req.params.productId)
+  await productDatabase.removeBy('_id', req.params.productId)
 })
 
 router.get('/:productId', async (req, res) => {
