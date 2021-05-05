@@ -4,6 +4,8 @@ const router = require('express').Router()
 
 router.get('/', async (req, res) => {
   const sellers = await sellerDatabase.load()
+
+  res.render('sellers', { sellers })
 })
 
 module.exports = router
