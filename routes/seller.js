@@ -18,4 +18,10 @@ router.delete('/:sellerId', async (req, res) => {
   await sellerDatabase.removeBy('_id', req.params.sellerId)
 })
 
+router.get('/:sellerId', async (req, res) => {
+  const seller = await sellerDatabase.find(req.params.sellerId)
+
+  res.render('seller', { seller })
+})
+
 module.exports = router
