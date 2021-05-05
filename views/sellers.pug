@@ -3,3 +3,7 @@ block content
 h1 Welcome Seller Page 
         p number of Sellers on sale #{sellers.length}
 
+        ol 
+            each seller in sellers
+                li  
+                    a(href=`/sellers/${seller.id}`) #{seller.name} 
