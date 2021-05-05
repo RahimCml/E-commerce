@@ -14,4 +14,8 @@ router.post('/', async (req, res) => {
   res.send(seller)
 })
 
+router.delete('/:sellerId', async (req, res) => {
+  await sellerDatabase.removeBy('_id', req.params.sellerId)
+})
+
 module.exports = router
