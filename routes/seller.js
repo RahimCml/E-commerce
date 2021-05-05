@@ -25,4 +25,10 @@ router.get('/:sellerId', async (req, res) => {
   res.render('seller', { seller })
 })
 
+router.patch('./sellerId', async (req, res) => {
+  const { name } = req.body
+
+  await sellerDatabase.update({ name })
+})
+
 module.exports = router
