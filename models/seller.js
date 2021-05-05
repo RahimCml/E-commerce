@@ -1,14 +1,12 @@
-const uuid = require('uuid')
+const mongoose = require('mongoose')
 
-class Seller {
-  constructor(id = uuid.v4(), name) {
-    this.id = id
-    this.name = name
-  }
+const SellerSchema = new mongoose.Schema({
+  name: String,
+  product: String,
+  email: String,
+  customer: String,
+  price: Number,
+  address: String,
+})
 
-  static create({ id, name }) {
-    return new Seller(id, name)
-  }
-}
-
-module.exports = Seller
+module.exports = mongoose.model('Seller', SellerSchema)
