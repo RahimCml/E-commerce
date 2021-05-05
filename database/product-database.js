@@ -2,7 +2,7 @@ const BaseDatabase = require('./base-database')
 const Product = require('../models/product')
 
 class ProductDatabase extends BaseDatabase {
-  findByName(name) {
+  async findByName(name) {
     return this.findBy('name', name)
   }
 }

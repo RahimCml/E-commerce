@@ -2,10 +2,10 @@ const BaseDatabase = require('./base-database')
 const Customer = require('../models/customer')
 
 class CustomerDatabase extends BaseDatabase {
-  findByName(name) {
+  async findByName(name) {
     return this.findBy('name', name)
   }
-  findByAddress(address) {
+  async findByAddress(address) {
     return this.findBy('address', address)
   }
 }
