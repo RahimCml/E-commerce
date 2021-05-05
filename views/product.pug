@@ -4,10 +4,10 @@ block content
         
         p  #{product.name}
             
-            if product.info.length
+            if product.infos.length
                 ol 
-                    each seller in products.length
-                        li #{seller.name}
+                    each info in product.infos
+                        li #{product.name}
             else 
                 p no information
                     
