@@ -20,6 +20,7 @@ router.delete('/:sellerId', async (req, res) => {
 
 router.get('/:sellerId', async (req, res) => {
   const seller = await sellerDatabase.find(req.params.sellerId)
+  if (!seller) return res.status(404).send('Cannot find seller')
 
   res.render('seller', { seller })
 })
