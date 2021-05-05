@@ -1,5 +1,4 @@
 const { productDatabase, sellerDatabase } = require('../database')
-const flatted = require('flatted')
 
 const router = require('express').Router()
 
@@ -30,13 +29,13 @@ router.post('/:productId/seller', async (req, res) => {
   const { sellerId } = req.body
 
   const product = await ProductDatabase.find(productId)
-  const seller = await sellerDatabase.find(sellerId)
+  const sellerName = await sellerDatabase.find(sellerId)
 
-  // product.info(this)
+  product.info(sellerName)
 
   await productDatabase.update(product)
 
-  res.send(flatted.stringify(product))
+  res.send(ok)
 })
 
 router.patch('./productId', async (req, res) => {
