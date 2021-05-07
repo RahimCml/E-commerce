@@ -11,9 +11,9 @@ const {
 const pasha = Customer.create({ name: 'Pasha', address: 'Baku' })
 const kenan = Customer.create({ name: 'Kenan', address: 'Ganja' })
 
-const chuba = Seller.create({ namee: 'Chuba' })
-const chanel = Seller.create({ namee: 'Chanel' })
-const cucci = Seller.create({ namee: 'Cucci' })
+const chuba = Seller.create({ name: 'Chuba' })
+const chanel = Seller.create({ name: 'Chanel' })
+const cucci = Seller.create({ name: 'Cucci' })
 
 const jeans = Product.create({ name: 'Jeans', price: 50 })
 const sweater = Product.create({ name: 'Sweater', price: 65 })
@@ -24,10 +24,6 @@ pasha.buyProduct(jeans, cucci)
 pasha.buyProduct(sweater, chuba)
 pasha.buyProduct(tShirt, chanel)
 kenan.buyProduct(parfum, chanel)
-
-jeans.infoProduct(chuba)
-tShirt.infoProduct(chanel)
-parfum.infoProduct(chanel)
 
 async function main() {
   try {
