@@ -24,20 +24,6 @@ router.get('/:productId', async (req, res) => {
   res.render('product', { product })
 })
 
-router.post('/:productId/seller', async (req, res) => {
-  const { productId } = req.params
-  const { sellerId } = req.body
-
-  const product = await ProductDatabase.find(productId)
-  const sellerName = await sellerDatabase.find(sellerId)
-
-  product.info(sellerName)
-
-  await productDatabase.update(product)
-
-  res.send(ok)
-})
-
 router.patch('./productId', async (req, res) => {
   const { name } = req.body
 
