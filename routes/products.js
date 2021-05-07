@@ -8,10 +8,13 @@ router.get('/', async (req, res) => {
   res.render('products', { products })
 })
 
-router.post('/', async (req, res) => {
-  const product = await productService.insert(req.body)
-
-  res.send(product)
+router.post('/', async (req, res, next) => {
+  try {
+    const product = await productService.insert(req.body)
+    res.send(product)
+  } catch (e) {
+    next(e)
+  }
 })
 
 router.delete('/:productId', async (req, res) => {
