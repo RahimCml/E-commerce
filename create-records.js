@@ -2,11 +2,7 @@ const Customer = require('./models/customer')
 const Seller = require('./models/seller')
 const Product = require('./models/product')
 const printSelectedOrders = require('./lib/printSelectedOrders')
-const {
-  customerDatabase,
-  sellerDatabase,
-  productDatabase,
-} = require('./database')
+const { customerService, sellerService, productService } = require('./services')
 
 const pasha = Customer.create({ name: 'Pasha', address: 'Baku' })
 const kenan = Customer.create({ name: 'Kenan', address: 'Ganja' })
@@ -29,14 +25,14 @@ async function main() {
   try {
     const leyla = Customer.create({ name: 'Leyla', address: 'Karabakh' })
 
-    await customerDatabase.save([kenan, pasha, leyla])
+    await customerService.save([kenan, pasha, leyla])
 
-    await sellerDatabase.save([chuba, cucci, chanel])
+    await sellerService.save([chuba, cucci, chanel])
 
-    await productDatabase.save([jeans, sweater, tShirt, parfum])
-    await productDatabase.load()
+    await productService.save([jeans, sweater, tShirt, parfum])
+    await productService.load()
 
-    const customers = await customerDatabase.load()
+    const customers = await customerService.load()
     customers.forEach(printSelectedOrders)
   } catch (e) {
     return console.log(e)

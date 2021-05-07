@@ -1,7 +1,7 @@
-const BaseDatabase = require('./base-database')
+const BaseService = require('./base-service')
 const Customer = require('../models/customer')
 
-class CustomerDatabase extends BaseDatabase {
+class CustomerService extends BaseService {
   async findByName(name) {
     return this.findBy('name', name)
   }
@@ -10,4 +10,4 @@ class CustomerDatabase extends BaseDatabase {
   }
 }
 
-module.exports = new CustomerDatabase(Customer)
+module.exports = new CustomerService(Customer)
