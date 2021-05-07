@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const indexRouter = require('./routes/index')
 const productsRouter = require('./routes/products')
-const sellersRouter = require('./routes/seller')
+const sellersRouter = require('./routes/sellers')
 require('./mongo-connection')
 
 const app = express()
