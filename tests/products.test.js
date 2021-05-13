@@ -9,6 +9,10 @@ test('creates a new product', async (done) => {
     price: 20,
   }
 
-  const response = await request.post('/products').send(productToCreate)
+  const response = await request
+    .post('/products')
+    .send(productToCreate)
+    .expect(200)
+
   done()
 })
