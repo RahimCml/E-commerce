@@ -7,7 +7,10 @@ test('creates a new seller', async (done) => {
     product: 'Jeans',
   }
 
-  const response = await request.post('/sellers').send(sellerToCreate)
+  const response = await request
+    .post('/sellers')
+    .send(sellerToCreate)
+    .expect(200)
 
   done()
 })
