@@ -8,5 +8,7 @@ test('creates a new product', async (done) => {
     size: 'L',
     price: 20,
   }
+
+  const response = await request.post('/products')
   done()
 })
