@@ -9,5 +9,7 @@ test('creates a new product', async (done) => {
     price: 20,
   }
 
+  const response = await request.post('/products')
+
   done()
 })
