@@ -14,5 +14,7 @@ test('creates a new seller', async (done) => {
 
   const sellerCreated = response.body
 
+  expect(sellerCreated).toMatchObject(sellerToCreate)
+
   done()
 })
