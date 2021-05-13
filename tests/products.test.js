@@ -14,5 +14,7 @@ test('creates a new product', async (done) => {
     .send(productToCreate)
     .expect(200)
 
+  const productCreated = response.body
+
   done()
 })
