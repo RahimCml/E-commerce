@@ -7,7 +7,7 @@ test('creates a new seller', async (done) => {
     product: 'Jeans',
   }
 
-  const response = await request.post('/sellers')
+  const response = await request.post('/sellers').send(sellerToCreate)
 
   done()
 })
