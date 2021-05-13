@@ -12,5 +12,7 @@ test('creates a new seller', async (done) => {
     .send(sellerToCreate)
     .expect(200)
 
+  const sellerCreated = response.body
+
   done()
 })
