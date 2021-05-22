@@ -22,7 +22,7 @@ export default {
 <template lang="pug">
   .home
     h1 Sellers
-        p(v-if="isLoading") Please wait...
+    p(v-if="isLoading") Please wait...
     div(v-else)
       p There are {{sellers.length}} sellers for sale.
       ol

@@ -20,7 +20,7 @@ export default {
 
 <template lang="pug">
   .home
-    h1 products
+    h1 Products
     p(v-if="isLoading") Please wait...
     div(v-else)
       p There are {{products.length}} products for sale.
