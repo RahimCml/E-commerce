@@ -46,5 +46,9 @@ export default new Vuex.Store({
 			const request = await axios.get(`/products/${productId}`);
 			return request.data;
 		},
+		async fetchCustomer(ctx, customerId) {
+			const request = await axios.get(`/customers/${customerId}`);
+			return request.data;
+		},
 	},
 });
