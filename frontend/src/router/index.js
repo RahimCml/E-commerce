@@ -5,6 +5,8 @@ import Customers from "../views/Customers";
 import Sellers from "../views/Sellers";
 import CustomerView from "../views/Customer";
 import ProductView from "../views/Product";
+import SellerView from "../views/Seller";
+
 
 Vue.use(VueRouter)
 
@@ -34,6 +36,11 @@ const routes = [
 		name: "CustomerView",
 		component: CustomerView
 	},
+  {
+		path: "/sellers/:sellerId",
+		name: "SellerView",
+		component: SellerView
+  },
 	{
 		path: "/about",
 		name: "About",
