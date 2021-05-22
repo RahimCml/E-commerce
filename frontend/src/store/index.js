@@ -2,6 +2,8 @@ import Vue from "vue";
 import Vuex from "vuex";
 import axios from "axios";
 
+axios.defaults.baseURL = "http://localhost:3000";
+
 Vue.use(Vuex);
 
 const Mutations = {
@@ -49,6 +51,6 @@ export default new Vuex.Store({
 		async fetchCustomer(ctx, customerId) {
 			const request = await axios.get(`/customers/${customerId}`);
 			return request.data;
-		},
+		}
 	},
 });
