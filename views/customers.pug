@@ -1,0 +1,9 @@
+extends layout 
+block content
+        h1 Welcome customer Page 
+        p number of customers on sale #{customers.length}
+
+        ol 
+            each customer in customers
+                li  
+                    a(href=`/customers/${customer.id}`) name: #{customer.name}

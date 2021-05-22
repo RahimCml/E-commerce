@@ -1,0 +1,9 @@
+extends layout 
+block content
+        h2 information
+        
+        p  #{customer.name}
+            
+        p  Customer Address: #{customer.address || 'No information'} 
+        p  Customer e-mail address : #{customer.email || 'No information'}
+
