@@ -10,6 +10,7 @@ export default {
   },
   async created () {
     await this.updateProduct()
+    this.isLoading = false
   },
   methods: {
     ...mapActions(['fetchProduct']),
@@ -22,4 +23,8 @@ export default {
 
 <template lang="pug">
   .product
+    p(v-if="isLoading") Please wait...
+    div(v-else)
+      ol product Detail
+      li Product: {{ product.name || 'No Detail' }}, Seller: {{ product.seller }},  Price: {{ product.price }}, Size: {{product.size}}
 </template>
