@@ -5,7 +5,7 @@ const router = require('express').Router()
 router.get('/', async (req, res) => {
   const sellers = await sellerService.load()
 
-  res.render('sellers', { sellers })
+  res.send(sellers)
 })
 
 router.post('/', async (req, res) => {
@@ -20,9 +20,10 @@ router.delete('/:sellerId', async (req, res) => {
 
 router.get('/:sellerId', async (req, res) => {
   const seller = await sellerService.find(req.params.sellerId)
-  if (!seller) return res.status(404).send('Cannot find seller')
 
-  res.render('seller', { seller })
+    if (!seller) return res.status(404);
+		res.send(seller);
+
 })
 
 router.patch('./sellerId', async (req, res) => {

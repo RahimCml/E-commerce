@@ -5,7 +5,7 @@ const router = require('express').Router()
 router.get('/', async (req, res) => {
   const products = await productService.load()
 
-  res.render('products', { products })
+  res.send(products)
 })
 
 router.post('/', async (req, res, next) => {
@@ -23,8 +23,8 @@ router.delete('/:productId', async (req, res) => {
 
 router.get('/:productId', async (req, res) => {
   const product = await productService.find(req.params.productId)
-  if (!product) return res.status(404).send('Cannot find product')
-  res.render('product', { product })
+  if (!product) return res.status(404)
+  res.send(product)
 })
 
 router.patch('./productId', async (req, res) => {

@@ -5,8 +5,7 @@ const router = require("express").Router();
 router.get("/", async (req, res) => {
 	const customers = await customerService.load();
 
-	res.render('customers', { customers })
-	// res.send(customers);
+	res.send(customers);
 });
 
 router.post("/", async (req, res, next) => {
@@ -24,12 +23,9 @@ router.delete("/:customerId", async (req, res) => {
 
 router.get("/:customerId", async (req, res) => {
 	const customer = await customerService.find(req.params.customerId);
-    if (!customer) return res.status(404).send("Cannot find customer");
 
-    res.render("customer", { customer });
-
-        // if (!customer) return res.status(404);
-        // res.send(customer);
+		if (!customer) return res.status(404);
+        res.send(customer);
 });
 
 router.post("/:customerId/orders", async (req, res) => {
