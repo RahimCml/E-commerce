@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import axios from "axios";
 
 Vue.use(Vuex);
 
@@ -28,6 +29,18 @@ export default new Vuex.Store({
 		},
 		decrement({ commit }, type) {
 			commit(Mutations.DECREMENT, type);
+		},
+		async fetchProducts() {
+			const request = await axios.get("/products");
+			return request.data;
+		},
+		async fetchCustomers() {
+			const request = await axios.get("/customers");
+			return request.data;
+		},
+		async fetchSellers() {
+			const request = await axios.get("/sellers");
+			return request.data;
 		},
 	},
 });
