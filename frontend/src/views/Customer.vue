@@ -25,9 +25,9 @@ export default {
   .customer
     p(v-if="isLoading") Please wait...
     div(v-else)
-      ol customer Detail
-      li Name: {{ customer.name || 'No Detail' }},
-      li Order: {{ customer.orders }},
-      li address: {{ customer.address }},
-      li e-mail address: {{customer.email}}
+      ol Customer Detail
+        li Name: {{ customer.name || 'No Detail' }},
+        li Order: {{ customer.orders }},
+        li address: {{ customer.address }},
+        li e-mail address: {{customer.email}}
 </template>

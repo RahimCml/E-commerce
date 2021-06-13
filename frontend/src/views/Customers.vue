@@ -20,11 +20,10 @@ export default {
 
 <template lang="pug">
   .home
-    h1 customers
+    h1 Customers
     p(v-if="isLoading") Please wait...
     div(v-else)
       p There are {{customers.length}} customers for sale.
-
       ol
         li(v-for="customer in customers")
           a(:href="`/customers/${customer._id}`") {{ customer.name }}

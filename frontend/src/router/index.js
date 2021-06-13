@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Products from '../views/Products'
-import Customers from "../views/Customers";
-import Sellers from "../views/Sellers";
-import CustomerView from "../views/Customer";
-import ProductView from "../views/Product";
-import SellerView from "../views/Seller";
+import Products from '../views/Products.vue'
+import Customers from "../views/Customers.vue";
+import Sellers from "../views/Sellers.vue";
+import CustomerView from "../views/Customer.vue";
+import ProductView from "../views/Product.vue";
+import SellerView from "../views/Seller.vue";
 
 
 Vue.use(VueRouter)

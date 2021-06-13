@@ -9,11 +9,12 @@ export default {
     }
   },
   async created () {
-    await this.updateseller()
+    await this.updateSeller()
+    this.isLoading = false
   },
   methods: {
     ...mapActions(['fetchSeller']),
-    async updateseller () {
+    async updateSeller () {
       this.seller = await this.fetchSeller(this.$route.params.sellerId)
     }
   },
@@ -22,4 +23,9 @@ export default {
 
 <template lang="pug">
   .seller
+    p(v-if="isLoading") Please wait...
+    div(v-else)
+      ol Seller Detail
+        li Seller name: {{seller.name}}
+        router-link(to='/products' tag='li') product name: {{ seller.product}}
 </template>
