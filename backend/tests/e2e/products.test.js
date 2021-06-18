@@ -1,5 +1,5 @@
-const app = require('../..')
-const request = require('supertest')(app)
+const request = require('supertest')(app);
+const app = require('../..');
 
 test('creates a new product', async (done) => {
   const productToCreate = {
@@ -7,16 +7,16 @@ test('creates a new product', async (done) => {
     seller: ['Chanel'],
     size: 'L',
     price: 20,
-  }
+  };
 
   const response = await request
     .post('/products')
     .send(productToCreate)
-    .expect(200)
+    .expect(200);
 
-  const productCreated = response.body
+  const productCreated = response.body;
 
-  expect(productCreated).toMatchObject(productToCreate)
+  expect(productCreated).toMatchObject(productToCreate);
 
-  done()
-})
+  done();
+});

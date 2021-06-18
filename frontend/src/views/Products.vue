@@ -1,5 +1,6 @@
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   name: 'Products',
   data () {
@@ -16,6 +17,7 @@ export default {
     ...mapActions(['fetchProducts'])
   }
 }
+
 </script>
 
 <template lang="pug">

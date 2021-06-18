@@ -1,5 +1,6 @@
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   name: 'SellerView',
   data () {
@@ -17,7 +18,7 @@ export default {
     async updateSeller () {
       this.seller = await this.fetchSeller(this.$route.params.sellerId)
     }
-  },
+  }
 }
 </script>
 

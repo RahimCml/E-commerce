@@ -1,10 +1,10 @@
-const BaseService = require('./base-service')
-const Seller = require('../models/seller')
+const BaseService = require('./base-service');
+const Seller = require('../models/seller');
 
 class SellerService extends BaseService {
   async findByName(name) {
-    return this.findBy('name', name)
+    return this.findBy('name', name);
   }
 }
 
-module.exports = new SellerService(Seller)
+module.exports = new SellerService(Seller);

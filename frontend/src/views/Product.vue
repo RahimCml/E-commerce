@@ -1,5 +1,6 @@
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   name: 'ProductView',
   data () {
@@ -17,7 +18,7 @@ export default {
     async updateProduct () {
       this.product = await this.fetchProduct(this.$route.params.productId)
     }
-  },
+  }
 }
 </script>
 
@@ -26,5 +27,8 @@ export default {
     p(v-if="isLoading") Please wait...
     div(v-else)
       ol product Detail
-      li Product: {{ product.name || 'No Detail' }}, Seller: {{ product.seller }},  Price: {{ product.price }}, Size: {{product.size}}
+        li Product: {{ product.name || 'No Detail' }}
+        li Seller: {{ product.seller }}
+        li Price: {{ product.price }}
+        li Size: {{product.size}}
 </template>

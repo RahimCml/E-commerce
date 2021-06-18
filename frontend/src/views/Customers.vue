@@ -1,5 +1,6 @@
 <script>
 import { mapActions } from 'vuex'
+
 export default {
   name: 'Customers',
   data () {
