@@ -4,7 +4,6 @@
       <router-link to="/products"> Products </router-link>
       <router-link to="/customers"> Customers </router-link>
       <router-link to="/sellers"> Sellers </router-link>
-      <router-link to="/about"> About </router-link>
     </div>
     <router-view/>
   </div>
