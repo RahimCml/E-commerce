@@ -1,11 +1,11 @@
-POST https://backend-c3dff4eucq-ew.a.run.app/products HTTP/1.1
-content-type: application/json 
+POST http://localhost:3000/products HTTP/1.1
+content-type: application/json
 
 {"name":"Jeans", "seller":"Chuba", "size": "L", "price": 95} 
 
 ###
 
-POST https://backend-c3dff4eucq-ew.a.run.app/customers HTTP/1.1
+POST http://localhost:3000/customers HTTP/1.1
 content-type: application/json 
 
 {"name":"Kenan", "address":"Baku", "email":"kenan@gmail.com", "order":""} 
@@ -20,3 +20,15 @@ content-type: application/json
 ###
 
 DELETE http://localhost:3000/products/6095408c3986814ef87c3978 HTTP/1.1
+
+###
+POST http://localhost:3000/customers/60db86a01bc48e10148bde41/orders HTTP/1.1
+content-type: application/json
+
+{"productId": "60db86c31bc48e10148bde42", "address": "Baku", "totalPrice": 58}
+
+###
+POST http://localhost:3000/customers/60db86c31bc48e10148bde42/orderings HTTP/1.1
+content-type: application/json
+
+{"productId": "60db86a01bc48e10148bde41", "address": "Baku", "totalPrice": 58}
