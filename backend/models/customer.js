@@ -6,7 +6,7 @@ const CustomerSchema = new mongoose.Schema({
   email: { type: String, required: true },
   orders: [
     {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'Order',
     },
   ],
