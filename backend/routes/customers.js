@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { customerService, orderService } = require('../services');
+const customerService  = require('../services/customer-service');
+const orderingService = require("../services/ordering-service");
 
 router.get('/', async (req, res) => {
   const customers = await customerService.load();
@@ -29,16 +30,16 @@ router.get('/:customerId', async (req, res) => {
 
 router.post('/:customerId/orders', async (req, res) => {
   const { customerId } = req.params;
-  const { productId, address, email } = req.body;
+  const { productId, address, totalPrice } = req.body;
 
-  const order = await orderService.orderInfo(
+  const ordering = await orderingService.order(
     productId,
     customerId,
     address,
-    email,
+    totalPrice
   );
 
-  res.send(order);
+  res.send(ordering);
 });
 
 router.patch('./customerId', async (req) => {
