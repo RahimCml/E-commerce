@@ -1,0 +1,14 @@
+extends layout
+block content
+  h2 orders
+  p There are #{orders.length} orders.
+
+  ol
+    each order in orders
+      li
+        p Customer:
+          a(href=`/customers/${order.customer.id}`) #{order.customer.name}
+        p Prodcut:
+          a(href=`/prodcuts/${order.prodcut.id}`) #{order.prodcut.name}
+        p Origin: #{order.origin}
+        p Total Price: #{order.totalPrice}
