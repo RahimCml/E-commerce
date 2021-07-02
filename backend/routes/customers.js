@@ -42,9 +42,10 @@ router.post('/:customerId/orders', async (req, res) => {
   res.send(ordering);
 });
 
-router.patch('./customerId', async (req) => {
+router.patch('/:customerId', async (req, res) => {
+  const { customerId } = req.params
   const { name } = req.body;
 
-  await customerService.update({ name });
+  await customerService.update(customerId, { name });
 });
 module.exports = router;

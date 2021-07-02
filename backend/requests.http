@@ -22,13 +22,22 @@ content-type: application/json
 DELETE http://localhost:3000/products/6095408c3986814ef87c3978 HTTP/1.1
 
 ###
-POST http://localhost:3000/customers/60db86a01bc48e10148bde41/orders HTTP/1.1
+
+POST http://localhost:3000/customers/60ddb2a72388b221f4398e88/orders HTTP/1.1
 content-type: application/json
 
-{"productId": "60db86c31bc48e10148bde42", "address": "Baku", "totalPrice": 58}
+{"productId": "60dd7544519a1a50206f018c", "name": "Kenan", "address": "Baku", "totalPrice": 58, "orders":""}
 
 ###
-POST http://localhost:3000/customers/60db86c31bc48e10148bde42/orderings HTTP/1.1
+
+PATCH http://localhost:3000/products/60dd7544519a1a50206f018c HTTP/1.1
 content-type: application/json
 
-{"productId": "60db86a01bc48e10148bde41", "address": "Baku", "totalPrice": 58}
+{"name": "a newer surname"}
+
+###
+
+PATCH http://localhost:3000/customers/60dd7547519a1a50206f018d HTTP/1.1
+content-type: application/json
+
+{"name": "new name4"}
