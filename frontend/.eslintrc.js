@@ -1,4 +1,4 @@
-module.exports = {
+(module.exports = {
   env: {
     commonjs: true,
     es6: true,
@@ -9,6 +9,9 @@ module.exports = {
     ecmaVersion: 2021,
     parser: 'babel-eslint'
   },
+  // ignorePatterns: [
+  //   'Customer.vue'
+  // ],
 
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -18,10 +21,5 @@ module.exports = {
 
   root: true,
 
-  extends: [
-    'airbnb-base',
-    'plugin:vue/essential',
-    '@vue/airbnb',
-    '@vue/standard'
-  ]
-}
+  extends: ['airbnb-base', 'plugin:vue/essential', '@vue/airbnb', '@vue/standard']
+})

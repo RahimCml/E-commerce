@@ -55,6 +55,12 @@ export default new Vuex.Store({
     async fetchSeller (ctx, sellerId) {
       const request = await axios.get(`/sellers/${sellerId}`)
       return request.data
+    },
+    async orderProduct ({ dispatch }, { customerId, productId, address, totalPrice }) {
+      const request = await axios.get(`/customers/${customerId}/orders`, {
+        productId, address, totalPrice
+      })
+      return request.data
     }
   }
 })
